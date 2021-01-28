@@ -27,7 +27,7 @@ export function App() {
 
 	return (
 		<TelestionClient
-			title="Telestion Groundstation"
+			title="Daedalus 2 Groundstation"
 			wrapper={children => (
 				<CommonWrapper widgets={widgets}>
 					<>{children}</>

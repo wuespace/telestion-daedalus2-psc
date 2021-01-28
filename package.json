@@ -2,7 +2,12 @@
 	"name": "daedalus-2-groundstation",
 	"version": "0.0.0",
 	"private": true,
-	"description": "",
+	"description": "Daedalus 2 Groundstation, a Telestion PSC generated using the telestion-client-cli",
+	"scripts": {
+		"start": "tc-cli start",
+		"build": "tc-cli build",
+		"release": "standard-version"
+	},
 	"dependencies": {
 		"@adobe/react-spectrum": "^3.6.0",
 		"@react-spectrum/tabs": "^3.0.0-alpha.3",
@@ -25,8 +30,10 @@
 		"@types/node": "^14.14.22",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
+		"@wuespace/telestion-client-cli": "^0.3.3",
 		"@wuespace/telestion-client-types": "^0.3.3",
 		"react-scripts": "^4.0.1",
+		"standard-version": "^9.1.0",
 		"typescript": "^4.1.3"
 	}
 }
