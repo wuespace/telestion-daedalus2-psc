@@ -14,7 +14,7 @@
 		"@spectrum-icons/illustrations": "^3.2.0",
 		"@spectrum-icons/ui": "^3.2.0",
 		"@spectrum-icons/workflow": "^3.2.0",
-		"@wuespace/telestion-client-common": "^0.3.3",
+		"@wuespace/telestion-client-common": "^0.11.2",
 		"@wuespace/telestion-client-core": "^0.3.3",
 		"electron": "^11.2.1",
 		"react": "^17.0.1",
