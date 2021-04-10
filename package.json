@@ -1,39 +1,77 @@
 {
 	"name": "daedalus-2-groundstation",
-	"version": "0.0.0",
-	"private": true,
 	"description": "Daedalus 2 Groundstation, a Telestion PSC generated using the telestion-client-cli",
+	"version": "0.0.0",
+	"homepage": ".",
+	"engines": {
+		"node": ">=14"
+	},
 	"scripts": {
-		"start": "tc-cli start",
+		"prepare": "husky install",
+		"start": "npm run start:electron",
+		"start:electron": "tc-cli start --electron",
+		"start:browser": "tc-cli start --browser",
 		"build": "tc-cli build",
-		"release": "standard-version"
+		"stats": "tc-cli stats",
+		"style": "prettier --write package.json '**/*{.ts,.tsx,.js,.jsx,.json,.html,.css,.scss,.sass,.yaml,.yml,.md}'",
+		"style:ci": "prettier --list-different package.json '**/*{.ts,.tsx,.js,.jsx,.json,.html,.css,.scss,.sass,.yaml,.yml,.md}'",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern node_modules/ --no-error-on-unmatched-pattern src",
+		"ts": "tsc",
+		"clean": "rimraf build dist"
+	},
+	"private": true,
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	},
 	"dependencies": {
-		"@adobe/react-spectrum": "^3.6.0",
-		"@react-spectrum/tabs": "^3.0.0-alpha.3",
-		"@spectrum-icons/illustrations": "^3.2.0",
+		"@adobe/react-spectrum": "^3.9.0",
+		"@fliegwerk/logsemts": "^0.4.0",
+		"@react-spectrum/table": "^3.0.0-alpha.10",
+		"@react-spectrum/tabs": "^3.0.0-beta.0",
+		"@spectrum-icons/illustrations": "^3.2.1",
 		"@spectrum-icons/ui": "^3.2.0",
 		"@spectrum-icons/workflow": "^3.2.0",
-		"@wuespace/telestion-client-common": "^0.3.3",
-		"@wuespace/telestion-client-core": "^0.3.3",
-		"electron": "^11.2.1",
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1",
+		"@wuespace/telestion-client-common": "^0.12.1",
+		"@wuespace/telestion-client-core": "^0.12.1",
+		"@wuespace/telestion-client-prop-types": "^0.12.1",
+		"@wuespace/vertx-mock-server": "^0.12.1",
+		"chalk": "^3.0.0",
+		"electron": "^12.0.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
 		"react-router-dom": "^5.2.0",
-		"zustand": "^3.2.0"
+		"zustand": "^3.4.0"
 	},
 	"devDependencies": {
-		"@testing-library/jest-dom": "^5.11.9",
-		"@testing-library/react": "^11.2.3",
-		"@testing-library/user-event": "^12.6.3",
-		"@types/jest": "^26.0.20",
-		"@types/node": "^14.14.22",
-		"@types/react": "^17.0.1",
-		"@types/react-dom": "^17.0.0",
-		"@wuespace/telestion-client-cli": "^0.3.3",
-		"@wuespace/telestion-client-types": "^0.3.3",
-		"react-scripts": "^4.0.1",
-		"standard-version": "^9.1.0",
-		"typescript": "^4.1.3"
+		"@testing-library/jest-dom": "^5.11.10",
+		"@testing-library/react": "^11.2.5",
+		"@testing-library/user-event": "^13.0.16",
+		"@types/jest": "^26.0.22",
+		"@types/node": "^14.14.37",
+		"@types/react": "^17.0.3",
+		"@types/react-dom": "^17.0.3",
+		"@wuespace/telestion-client-cli": "^0.12.1",
+		"@wuespace/telestion-client-types": "^0.12.1",
+		"husky": "^6.0.0",
+		"prettier": "^2.2.1",
+		"pretty-quick": "^3.1.0",
+		"react-scripts": "^4.0.3",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.2.3"
 	}
 }
