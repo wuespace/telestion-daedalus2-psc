@@ -1,3 +1,9 @@
+# ⚠️ Attention!
+
+**This repository is no longer the main development tree for the Daedalus2 Client and therefore deprecated. \
+Please use the new combined project repository instead:
+[telestion-project-daedalus2](https://github.com/wuespace/telestion-project-daedalus2)**
+
 # Daedalus 2 Groundstation
 
 [![Created using the @wuespace/telestion-client-cli](https://img.shields.io/badge/created%20using-%40wuespace%2Ftelestion--client--cli-%23452897)](https://github.com/wuespace/telestion-client/tree/main/packages/telestion-client-cli)
